@@ -2,18 +2,17 @@ h2 {
   color: blue;
 }
 
-#create-task {
-  padding-bottom: 10px;
+label {
+  margin-bottom: 0px;
 }
 
-/* -------- todo-list checker ----------- */
+/* -------- mark completed checkbox----------- */
 .task-container {
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-weight: normal;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -66,8 +65,8 @@ border-radius: 15px;
 
 /* Style the mark-completed-button/indicator */
 .task-container .mark-completed-button:after {
-  left: 9px;
-  top: 5px;
+  left: 10px;
+  top: 7px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -76,3 +75,29 @@ border-radius: 15px;
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+/* --------- task ------------- */
+.task {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #E6E9EE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-container {
+  padding-top: 3px;
+}
+
+.remove-button {
+  -webkit-transition: color 500ms;
+  -moz-transition: color 500ms;
+  -o-transition: color 500ms;
+  transition: color 500ms;
+  color: transparent;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: default;
+}
+
+#todo-list>div:hover .remove-button{color:#d50c0c}
