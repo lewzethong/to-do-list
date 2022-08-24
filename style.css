@@ -5,3 +5,74 @@ h2 {
 #create-task {
   padding-bottom: 10px;
 }
+
+/* -------- todo-list checker ----------- */
+.task-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+}
+
+/* Hide the browser's default checkbox */
+.task-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.mark-completed-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  
+border-radius: 15px;
+}
+
+/* On mouse-over, add a grey background color */
+.task-container:hover input ~ .mark-completed-button {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.task-container input:checked ~ .mark-completed-button {
+  background-color: #2196F3;
+}
+
+/* Create the mark-completed-button/indicator (hidden when not checked) */
+.mark-completed-button:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the mark-completed-button when checked */
+.task-container input:checked ~ .mark-completed-button:after {
+  display: block;
+}
+
+/* Style the mark-completed-button/indicator */
+.task-container .mark-completed-button:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
