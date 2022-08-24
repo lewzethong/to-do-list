@@ -1,10 +1,89 @@
-h2 {
-  color: blue;
-}
-
 label {
   margin-bottom: 0px;
 }
+
+body {
+  background-color: #71b0f8;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  padding-bottom: 1rem;
+  color: #F9F9F9;
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.to-do-list-container {
+  background: #F9F9F9;
+  border-radius: 1rem;
+  box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
+  padding: 0.25rem 0;
+}
+
+.todo-list-container {
+  background: #F9F9F9;
+  border-radius: 1rem;
+  box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
+  padding: 0.25rem 0;
+}
+
+#create-task {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #E6E9EE;
+  display: flex;
+  justify-content: space-between;
+}
+
+#new-task {
+  flex-grow: 1;
+  padding: 1rem 0;
+  border: none;
+  background: none;
+}
+
+#create-task button {
+  background-color: #44F1A6;
+  border: none;
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E6E9EE;
+  padding: 1rem 2rem;
+  align-items: center;
+  font-size: 1.15rem;
+  color: #9B9B9B;
+}
+
+.todo-filter {
+  display: flex;
+}
+
+.todo-filter button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+}
+
+.todo-filter .active {
+  background-color: #E6EAED;
+  border-radius: 1.5rem;
+  color: #3C3C48;
+}
+
+
 
 /* -------- mark completed checkbox----------- */
 .task-container {
@@ -37,8 +116,7 @@ label {
   height: 25px;
   width: 25px;
   background-color: #eee;
-  
-border-radius: 15px;
+  border-radius: 15px;
 }
 
 /* On mouse-over, add a grey background color */
@@ -62,6 +140,11 @@ border-radius: 15px;
 .task-container input:checked ~ .mark-completed-button:after {
   display: block;
 }
+
+.task-container input:checked ~ p{
+    color: rgb(217, 217, 217);
+    text-decoration: line-through;
+} 
 
 /* Style the mark-completed-button/indicator */
 .task-container .mark-completed-button:after {
